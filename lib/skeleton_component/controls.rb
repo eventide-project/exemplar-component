@@ -7,6 +7,6 @@ require 'skeleton_component/controls/version'
 
 require 'skeleton_component/controls/skeleton'
 
-require 'skeleton_component/controls/commands/do_something'
+# require 'skeleton_component/controls/commands/...'
 
-require 'skeleton_component/controls/events/something_happened'
+# require 'skeleton_component/controls/events/...'

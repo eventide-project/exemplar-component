@@ -3,10 +3,9 @@ module SkeletonComponent
     include Schema::DataStructure
 
     attribute :id, String
-    attribute :something_happened_time, Time
 
-    def something_happened?
-      !something_happened_time.nil?
-    end
+    # TODO Implement attributes
+    # TODO Implement entity logic, predicates, mutations, calculations, etc?
+    # Note: This class's methods should pertain to its attributes
   end
 end

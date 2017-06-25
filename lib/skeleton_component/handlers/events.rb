@@ -7,9 +7,11 @@ module SkeletonComponent
       include Messages::Commands
       include Messages::Events
 
-      handle SomethingHappened do |something_happened|
-        # If pertinent, react to the SomethingHappened event
-      end
+      # TODO Implement event handler blocks
+      # Note: Delete if not handling events
+
+      # handle SomethingHappened do |something_happened|
+      # end
     end
   end
 end

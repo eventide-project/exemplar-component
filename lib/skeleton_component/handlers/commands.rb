@@ -19,24 +19,26 @@ module SkeletonComponent
 
       category :skeleton
 
-      handle DoSomething do |do_something|
-        skeleton_id = do_something.skeleton_id
+      # TODO Implement command handler block
+      # eg:
+      # handle DoSomething do |do_something|
+      #   skeleton_id = do_something.skeleton_id
 
-        skeleton, version = store.fetch(skeleton_id, include: :version)
+      #   skeleton, version = store.fetch(skeleton_id, include: :version)
 
-        if skeleton.something_happened?
-          logger.info(tag: :ignored) { "Command ignored (Command: #{do_something.message_type}, Skeleton ID: #{skeleton_id})" }
-          return
-        end
+      #   if skeleton.something_happened?
+      #     logger.info(tag: :ignored) { "Command ignored (Command: #{do_something.message_type}, Skeleton ID: #{skeleton_id})" }
+      #     return
+      #   end
 
-        something_happened = SomethingHappened.follow(do_something)
+      #   something_happened = SomethingHappened.follow(do_something)
 
-        something_happened.processed_time = clock.iso8601
+      #   something_happened.processed_time = clock.iso8601
 
-        stream_name = stream_name(skeleton_id)
+      #   stream_name = stream_name(skeleton_id)
 
-        write.(something_happened, stream_name, expected_version: version)
-      end
+      #   write.(something_happened, stream_name, expected_version: version)
+      # end
     end
   end
 end
